@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mel Puro — Pedido Rápido</title>
+  <meta name="description" content="Mel Puro Local — Natural e artesanal, direto do apiário à sua mesa. Faça pedidos rápidos via WhatsApp.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="container nav">
+    <div class="brand">
+      <div class="logo">🍯</div>
+      <span>Mel Puro Local</span>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="card section hero">
+      <h1>Mel Puro, Natural e Artesanal</h1>
+      <p class="hero-text">Do apiário à sua mesa, nosso mel é colhido, extraído e embalado com todo cuidado, preservando sabor, aroma e nutrientes. 100% natural, sem aditivos ou conservantes.</p>
+    </section>
+
+    <!-- COLETA -->
+    <section class="card section" id="coleta">
+      <h2>Como coletamos o mel</h2>
+      <p>A coleta é feita nas primeiras horas da manhã, quando as abelhas estão mais tranquilas. Retiramos apenas os favos operculados, garantindo que o mel esteja maduro e pronto para consumo. O trabalho é manual, cuidadoso e respeitoso com as colmeias, preservando a saúde das abelhas e a sustentabilidade do apiário.</p>
+      <p>Cada favo é cuidadosamente inspecionado antes da extração. Utilizamos técnicas que minimizam o estresse das abelhas, garantindo que elas continuem produzindo mel de qualidade durante todo o ano.</p>
+    </section>
+
+    <!-- EXTRAÇÃO -->
+    <section class="card section" id="extracao">
+      <h2>Extração do mel</h2>
+      <p>Após a coleta, os favos passam pelo processo de extração. Utilizamos centrífugas específicas, sem aquecimento excessivo, para preservar enzimas, vitaminas e o aroma natural do mel. Todo o processo é feito em ambiente limpo e controlado, garantindo que o mel mantenha sua pureza e sabor característico.</p>
+      <p>Não adicionamos água ou conservantes. Cada lote é testado visualmente e armazenado de forma segura até o envase.</p>
+    </section>
+
+    <!-- EMBALAGEM -->
+    <section class="card section" id="embalagem">
+      <h2>Como embalamos</h2>
+      <p>O envase é realizado em frascos esterilizados, com tampas lacradas e rotulagem completa com lote e validade. Tudo é feito manualmente, garantindo atenção a cada detalhe. A embalagem mantém o mel protegido da luz e de contaminações externas, preservando suas propriedades naturais por mais tempo.</p>
+      <p>Oferecemos frascos de 500g e 1kg, prontos para consumo ou para presentear alguém especial. Todo o processo segue boas práticas de higiene e transporte seguro, desde o apiário até sua casa.</p>
+    </section>
+
+    <!-- PRODUTOR -->
+    <section class="card section" id="produtor">
+      <h2>Sobre o produtor</h2>
+      <p>Nosso mel é produzido por Paulo Sérgio, apicultor dedicado há mais de 10 anos. Com cuidado artesanal, ele garante que cada pote de mel seja puro e saboroso. A colheita é sustentável, respeitando a natureza e o ciclo das abelhas.</p>
+      <p>Contato: <a href="tel:+554498104219">+55 (44) 9810-4219</a></p>
+      <img src="https://thumbs.dreamstime.com/b/produc%c3%a7%c3%a3o-de-mel-api%c3%a1rio-eunapolis-bahia-brasil-maio-apicultor-%c3%a9-visto-pr%c3%b3ximo-%c3%a0-colmeia-abelhas-na-cidade-179354362.jpg" 
+           alt="Foto do produtor" 
+           class="produtor-img">
+    </section>
+
+    <!-- FORMULÁRIO DE PEDIDO -->
+    <section class="card section form-section" id="pedido">
+      <h2>Faça seu pedido rápido</h2>
+      <form id="order-form">
+        <div class="row">
+          <label for="size">Tamanho</label>
+          <select id="size" name="size" required>
+            <option value="500g">500g — R$ 20,00</option>
+            <option value="1kg">1kg — R$ 45,00</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label for="qty">Quantidade</label>
+          <input id="qty" name="qty" type="number" min="1" value="1" required>
+        </div>
+
+        <div class="row">
+          <label for="buyer">Seu nome (opcional)</label>
+          <input id="buyer" name="buyer" type="text" placeholder="Ex.: Maria Silva">
+        </div>
+
+        <div class="row">
+          <label for="note">Observações (opcional)</label>
+          <textarea id="note" name="note" rows="3" placeholder="Ex.: Prefiro tampa flip"></textarea>
+        </div>
+
+        <div class="row">
+          <button type="submit" class="cta" aria-label="Envia
+r pedido pelo WhatsApp">📲 Enviar pedido no WhatsApp</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p>© <span id="ano"></span> Mel Puro Local — Produto artesanal.</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+  <script>
+    // Define o ano atual no footer
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
