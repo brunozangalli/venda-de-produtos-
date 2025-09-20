@@ -7,6 +7,9 @@
   <meta name="description" content="Mel Puro Local — Natural e artesanal, direto do apiário à sua mesa. Faça pedidos rápidos via WhatsApp.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Carrega o JS (com defer) -->
+  <script src="script.js" defer></script>
 </head>
 <body>
   <!-- HEADER -->
@@ -84,8 +87,7 @@
         </div>
 
         <div class="row">
-          <button type="submit" class="cta" aria-label="Envia
-r pedido pelo WhatsApp">📲 Enviar pedido no WhatsApp</button>
+          <button type="submit" class="cta" aria-label="Enviar pedido pelo WhatsApp">📲 Enviar pedido no WhatsApp</button>
         </div>
       </form>
     </section>
@@ -96,11 +98,5 @@ r pedido pelo WhatsApp">📲 Enviar pedido no WhatsApp</button>
   <footer class="container">
     <p>© <span id="ano"></span> Mel Puro Local — Produto artesanal.</p>
   </footer>
-
-  <script src="app.js" defer></script>
-  <script>
-    // Define o ano atual no footer
-    document.getElementById('ano').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
